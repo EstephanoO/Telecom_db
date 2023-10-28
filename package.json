@@ -1,0 +1,26 @@
+{
+  "name": "telecom_db",
+  "version": "1.0.0",
+  "description": "telecom database",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "nodemon --exec 'mocha' test/*.test.js",
+    "dev": "node --watch ./app.js"
+  },
+  "author": "Estephano Orbegoso",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "2.8.5",
+    "express": "^4.18.2",
+    "mysql2": "^3.6.0",
+    "react": "^18.2.0",
+    "zod": "3.21.4"
+  },
+  "devDependencies": {
+    "chai": "^4.3.10",
+    "chai-http": "^4.4.0",
+    "mocha": "^10.2.0",
+    "nodemon": "^3.0.1"
+  }
+}

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de usuarios</title>
+</head>
+<body>
+  <h1>Lista de usuarios</h1>
+  <ul id="user-list"></ul>
+  <script>
+    fetch('http://localhost:3000/users')
+      .then(response => response.json())
+      .then(data => {
+        const userList = document.getElementById('user-list');
+        data.forEach(user => {
+          const userItem = document.createElement('li');
+          userItem.textContent = user.nombre;
+          userList.appendChild(userItem);
+        });
+      })
+      .catch(error => console.error(error));
+  </script>
+</body>
+</html>
